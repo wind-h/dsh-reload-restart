@@ -1,4 +1,4 @@
-# 刷新 / 重启（@local/dsh-reload-restart）
+# 刷新 / 重启（dsh-reload-restart）
 
 DeepSeek Harness 桌面版插件：在应用**顶部菜单栏**（「应用 / 编辑」一栏右侧）添加两个按钮——
 
@@ -15,7 +15,7 @@ git clone https://github.com/wind-h/dsh-reload-restart.git
 plugin_manager install_bundle <克隆路径>/dsh-reload-restart
 ```
 
-已安装时更新需先 `remove_bundle @local/dsh-reload-restart` 再执行上面的安装。
+已安装时更新需先 `remove_bundle dsh-reload-restart` 再执行上面的安装。
 
 ## 工作原理
 
@@ -58,7 +58,7 @@ dsh-reload-restart/
 ├── index.js              # 宿主半边：注册 ping / restart 两条回环路由
 ├── client.js             # 客户端半边：菜单栏按钮 + 确认框（React + 应用 UI 套件）
 ├── assets/restart-app.mjs # 独立接手进程：关壳 → 等端口 → 清 Cookie → 拉起
-├── package.json          # @local/dsh-reload-restart（ESM，exports 四个入口）
+├── package.json          # dsh-reload-restart（ESM，exports 四个入口）
 ├── cordis.patch.yml      # cordis 补丁：插入 dsh-reload-restart 插件
 ├── locale/zh-CN.json     # 插件元数据（标题/描述，插件详情页展示）
 ├── locale/en.json
@@ -72,4 +72,4 @@ dsh-reload-restart/
 
 ## 卸载
 
-`plugin_manager remove_bundle @local/dsh-reload-restart`——按钮与路由随即移除；日志与 Cookie 备份保留在 `DSH_HOME\logs` 与 `%APPDATA%\@deepseek-ai\dsh-desktop\Network` 下，可手动删除。
+`plugin_manager remove_bundle dsh-reload-restart`——按钮与路由随即移除；日志与 Cookie 备份保留在 `DSH_HOME\logs` 与 `%APPDATA%\@deepseek-ai\dsh-desktop\Network` 下，可手动删除。

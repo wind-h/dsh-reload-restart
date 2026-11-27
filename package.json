@@ -1,6 +1,6 @@
 {
-  "name": "@local/dsh-reload-restart",
-  "version": "1.8.0",
+  "name": "dsh-reload-restart",
+  "version": "1.9.0",
   "private": true,
   "type": "module",
   "description": "Adds reload and restart buttons to the DeepSeek Harness desktop top menu bar.",
@@ -44,5 +44,8 @@
       "immediately": true,
       "inject": []
     }
+  },
+  "engines": {
+    "dsh": ">=0.2.0-rc.1 <0.3.0-0"
   }
 }

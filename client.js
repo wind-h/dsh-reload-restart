@@ -1,5 +1,5 @@
 /**
- * Client half of @local/dsh-reload-restart (v4 — native-styled dialogs).
+ * Client half of dsh-reload-restart (v4 — native-styled dialogs).
  *
  * Adds two buttons into the desktop caption menubar (the 应用/编辑 bar that
  * lib/preload-app.cjs mounts as a <div data-windows-menu> with an OPEN shadow
@@ -21,7 +21,7 @@
  *     the page dying with the shell is the expected success path.
  */
 window.__ModuleLoader__.load({
-  id: '@local/dsh-reload-restart',
+  id: 'dsh-reload-restart',
   factory(require) {
     const React = require('react')
     const ReactDOMClient = require('react-dom/client')
@@ -40,7 +40,7 @@ window.__ModuleLoader__.load({
 
     const RESTART_URL = '/dsh-reload-restart/restart'
     const PING_URL = '/dsh-reload-restart/ping'
-    const CLIENT_VERSION = '1.8.0'
+    const CLIENT_VERSION = '1.9.0'
 
     function api(path) {
       const relative = String(path).replace(/^\/+/, '')

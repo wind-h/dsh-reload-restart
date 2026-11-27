@@ -1,4 +1,4 @@
-# 刷新 / 重启（@local/dsh-reload-restart）
+# 刷新 / 重启（dsh-reload-restart）
 
 在 DeepSeek Harness 桌面应用**顶部菜单栏**（「应用 / 编辑」一栏的右侧）添加两个按钮：
 

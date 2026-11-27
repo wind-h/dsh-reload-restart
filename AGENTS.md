@@ -1,6 +1,6 @@
 # AGENTS.md — 给 AI 代理的项目说明
 
-本目录是 DeepSeek Harness (DSH) 桌面版插件 **@local/dsh-reload-restart** 的源码（实际版本以 package.json 为准）：顶部菜单栏的「刷新 / 重启」按钮。已通过 `pnpm link` 安装进当前 profile——**本目录的文件就是运行中的文件**。
+本目录是 DeepSeek Harness (DSH) 桌面版插件 **dsh-reload-restart** 的源码（实际版本以 package.json 为准）：顶部菜单栏的「刷新 / 重启」按钮。已通过 `pnpm link` 安装进当前 profile——**本目录的文件就是运行中的文件**。
 
 ## 文件地图
 
@@ -30,7 +30,7 @@ DSH 插件机制参考：DSH 工作区根目录下的 `docs/`（从 app.asar 提
 1. 改本目录文件（installed bundle 是 link，无需拷贝）。
 2. **版本号两处同步**：`package.json` 的 `version` + `client.js` 的 `CLIENT_VERSION` 常量（用于 diag 上报核对客户端实际加载版本）。
 3. 语法检查：`node --check index.js client.js assets/restart-app.mjs`。
-4. 更新安装：`plugin_manager remove_bundle @local/dsh-reload-restart` → `plugin_manager install_bundle <本目录绝对路径>`（直接重装会报 already-installed）。
+4. 更新安装：`plugin_manager remove_bundle dsh-reload-restart` → `plugin_manager install_bundle <本目录绝对路径>`（直接重装会报 already-installed）。
 5. 生效时机：宿主半边**热应用**（装完即生效）；客户端半边要**刷新页面**才加载；worker 每次重启时从磁盘现读，装完下次重启即用新版。
 
 ## 验证手段
