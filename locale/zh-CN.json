@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "刷新 / 重启",
+    "description": "在顶部菜单栏添加刷新页面和重启应用按钮。",
+    "detail": "docs/DETAIL.md"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Reload / Restart",
+    "description": "Adds page refresh and app restart buttons to the top menu bar.",
+    "detail": "docs/DETAIL.md"
+  }
+}

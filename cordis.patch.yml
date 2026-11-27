@@ -1,0 +1,3 @@
+- insert:
+    - id: dsh-reload-restart
+      name: '@local/dsh-reload-restart'
